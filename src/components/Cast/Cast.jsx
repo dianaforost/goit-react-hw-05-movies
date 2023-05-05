@@ -4,7 +4,7 @@ import { useState } from 'react';
 import css from 'styles.module.css';
 import propTypes from 'prop-types';
 
-export const Cast = ({movie}) =>{
+export function Cast ({movie}){
     // console.log(movie.id);
     const [cast, setCast] = useState([]);
     useEffect(() => {

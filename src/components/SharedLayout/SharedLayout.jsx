@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import css from 'styles.module.css';
-export const SharedLayout = () =>{
+export default function SharedLayout(){
   const classs = css.container  + ' ' + css.HeaderCont;
   let activeClassName = {
     color: 'rgb(191 0 0)',

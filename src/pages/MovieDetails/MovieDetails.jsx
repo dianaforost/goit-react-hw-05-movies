@@ -10,7 +10,7 @@ import { Reviews } from "components/Reviews/Reviews";
 
 import css from 'styles.module.css';
 
-export const MovieDetails = () => {
+export default function MovieDetails (){
     const [movie, setMovie] = useState(null);
     const {id} = useParams();
     const location = useLocation();
