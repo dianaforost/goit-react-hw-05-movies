@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { SearchBar } from "components/SearchBar/SearchBar";
 import css from 'styles.module.css'
 
-export const Movies= () =>{
+export default function Movies(){
     const [searchParams, setSearchParams] = useSearchParams();
     const searchQuery = searchParams.get('query');
     const [movies, setMovies] = useState(null)

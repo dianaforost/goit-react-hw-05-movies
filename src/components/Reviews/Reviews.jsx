@@ -3,7 +3,7 @@ import { getMoviesReviews } from '../api/api';
 import css from 'styles.module.css'
 import propTypes from 'prop-types';
 
-export const Reviews = ({movie}) =>{
+export function Reviews ({movie}) {
 const [reviews, setReview] = useState([]);
 useEffect(() => {
     const getMovies = async() =>{

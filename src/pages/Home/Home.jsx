@@ -5,7 +5,7 @@ import {getMovies} from '../../components/api/api';
 import css from 'styles.module.css';
 import { SectionHero } from "components/SectionHero/SectionHero";
 
-export const Home = () =>{
+export default function Home (){
 
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
