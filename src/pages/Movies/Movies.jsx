@@ -16,8 +16,13 @@ export default function Movies(){
         return;
       }
         const fetchMovies = async () => {
-          const movies = await getMoviesByQuery(searchQuery, currentPage);
-          setMovies(movies);
+          const movie = await getMoviesByQuery(searchQuery, currentPage);
+          // if(movie.total_results === 0){
+          //   return;
+          // }
+          // else{
+            setMovies(movie);
+          // }
           // console.log(movies);
         };
         fetchMovies()
@@ -25,13 +30,16 @@ export default function Movies(){
 
 
 
-      function onSubmit(value) {
+      async function onSubmit(value) {
         if (value === '') {
           return;
         }
         if (value === ' ') {
           return;
         }
+        // if(movies === null){
+        //   return;
+        // }
         setSearchParams({ query: value });
         setCurrentPage(1)
       }
