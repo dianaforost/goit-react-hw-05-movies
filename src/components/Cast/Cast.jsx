@@ -2,6 +2,7 @@ import { getMoviesCredits } from '../api/api';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import css from 'styles.module.css';
+import propTypes from 'prop-types';
 
 export const Cast = ({movie}) =>{
     // console.log(movie.id);
@@ -24,37 +25,6 @@ export const Cast = ({movie}) =>{
     </ul>
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// getMoviesCredits(movie.id).then(movie => console.log(movie)).catch(error => {
-//     console.log(error);
-//   })
-
-
-
-
-
-
-    //   console.log(movie);
-    // getMoviesCredits(movie.id)
-    //   return <h1>{cast.id}</h1>
-    // return <>
-    // <img src={`https://image.tmdb.org/t/p/w300/${movie.cast.profile_path}`}></img>
-    // </>
-    // return <>
-    // {movie.cast.map(mov => (<h1>${movie.name}</h1>))}
-    // </>
+Cast.propTypes ={
+    movie: propTypes.object
+}

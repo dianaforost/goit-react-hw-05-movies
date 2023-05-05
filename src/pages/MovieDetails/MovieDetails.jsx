@@ -15,7 +15,6 @@ export const MovieDetails = () => {
     const {id} = useParams();
     const location = useLocation();
     const backLinkHref = location.state?.from ?? "/";
-// console.log(movie);
 
 let activeClassName = {
     color: 'rgb(191 0 0)',
